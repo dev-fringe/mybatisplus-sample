@@ -22,16 +22,6 @@ import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 @ComponentScan( basePackages ="dev.fringe.service")
 public class MapperConfig {
 
-    @Value("${db.driverClassName}")
-    private String driverClassName;
-    @Value("${db.url}")
-    private String url;
-    @Value("${db.username}")
-    private String username;
-    @Value("${db.password}")
-    private String password;
-
-    
     @Bean
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource") DataSource d) throws Exception {
         MybatisSqlSessionFactoryBean s = new MybatisSqlSessionFactoryBean();

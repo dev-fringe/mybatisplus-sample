@@ -16,7 +16,7 @@ public class Main implements InitializingBean {
 
 	@Autowired
 	MainModelMapper mapper;
-
+	
 	public static void main(String[] args) {
 		new AnnotationConfigApplicationContext(Main.class);
 	}
